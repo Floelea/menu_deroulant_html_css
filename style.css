@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 12px sans-serif;
+}
+.menuderoulant {
+  height: 60px;
+  list-style: none;
+  padding: 10px;
+  margin: 40px;
+}
+.menuderoulant li {
+  /*DECALE LE MENU EN HAUT SUR LA DROITE*/
+  float: left;
+  width: 200px;
+}
+
+.menuderoulant li a:link,
+.menuderoulant a:visited {
+  /*COLORE LES MENUS CREE LES BORDURES POUR LIMITER LES MENUS*/
+  display: block;
+  color: #ffffff;
+  background: #293245;
+  padding: 6px 10px;
+  border-right: 1px solid #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+.menuderoulant li a:hover {
+  background-color: #199bd2; /*CHANGE LA COULEUR DU MENU AU SURVOL DE LA SOURIS*/
+}
+.menuderoulant li a:active {
+  /*CHANGE LA COULEUR DU MENU AU CLIC DE LA SOURIS*/
+  background-color: #808080;
+}
+.menuderoulant .sousmenu {
+  /*REND LES MENUS INVISIBLES POUR L'INSTANT ET ENLEVE LEUR PUCES*/
+  list-style-type: none;
+  display: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+.menuderoulant .sousmenu li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+.menuderoulant .sousmenu li a:link,
+.menuderoulant li:visited {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #808080;
+}
+.menuderoulant.sousmenu li:hover {
+  background-color: #199bd2;
+}
+.menuderoulant li:hover .sousmenu {
+  display: block;
+}
